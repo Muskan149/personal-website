@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #fbf7f0;
+  --color-brown: #8b5e3c;
+  --color-brown-deep: #6f4a2f;
+  --color-brick: #9c3a2c;
+  --font-sans: var(--font-inter);
+  --font-samarkan: var(--font-samarkan-file);
+  --animate-tilt: tilt 1000ms ease-in-out;
+  --animate-shake: shake 1000ms ease-in-out;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Quick jittery shake + vibrate, used when hovering a market stall */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, -1px) rotate(-1.5deg);
+  }
+  20% {
+    transform: translate(3px, 1px) rotate(1.5deg);
+  }
+  30% {
+    transform: translate(-3px, 2px) rotate(-1deg);
+  }
+  40% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-2px, 1px) rotate(-1.5deg);
+  }
+  60% {
+    transform: translate(3px, -2px) rotate(1.5deg);
+  }
+  70% {
+    transform: translate(-3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(2px, -1px) rotate(0.5deg);
+  }
+  90% {
+    transform: translate(-1px, 1px) rotate(-0.5deg);
+  }
+}
+
+/* Playful hand-drawn highlighter: brown block with ragged, uneven ends */
+.highlight {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  padding: 0.3em 0.8em 0.35em;
+  color: var(--color-cream);
+  font-family: var(--font-caveat), cursive;
+  font-size: 1.7em;
+  line-height: 1.15;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brown);
+  clip-path: polygon(
+    2% 14%, 6% 3%, 16% 0%, 30% 7%, 46% 1%, 62% 6%, 78% 0%, 92% 5%,
+    99% 0%, 97% 22%, 100% 46%, 96% 70%, 100% 92%, 90% 100%, 74% 94%,
+    58% 100%, 42% 95%, 26% 100%, 12% 93%, 3% 100%, 0% 76%, 3% 54%,
+    0% 30%
+  );
+  transform: rotate(-0.8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-tilt {
+    animation: none;
+  }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-brown);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}

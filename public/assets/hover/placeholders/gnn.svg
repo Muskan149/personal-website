@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" role="img" aria-label="GNN foundation models">
+  <rect width="480" height="330" fill="#FFFDF8"/>
+  <circle cx="90" cy="80" r="46" fill="#D8E4F0" opacity="0.8"/>
+  <circle cx="400" cy="250" r="70" fill="#D8E4F0" opacity="0.5"/>
+  <path d="M0 260 Q120 220 240 260 T480 260 V330 H0 Z" fill="#D8E4F0" opacity="0.6"/>
+  <text x="240" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#8B5E3C">GNN foundation models</text>
+  <text x="240" y="196" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#8B5E3C" opacity="0.7">placeholder image</text>
+</svg>
