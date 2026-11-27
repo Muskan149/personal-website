@@ -19,7 +19,6 @@ export default function Hero() {
   return (
     <div className="grid items-start gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:gap-16">
       <Bio
-        activeId={activeId}
         pinnedId={pinnedId}
         onHover={setHoveredId}
         onTogglePin={togglePin}

@@ -60,6 +60,9 @@ export default function Camera({ activeId }: CameraProps) {
           ))}
         </div>
       </div>
+      <p className="-mt-6 mr-8 text-right font-[family-name:var(--font-caveat)] text-xl text-brown">
+        try hovering over the highlighted text...
+      </p>
     </div>
   );
 }

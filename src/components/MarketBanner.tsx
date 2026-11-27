@@ -23,8 +23,8 @@ const stalls = [
         <strong>Fun fact:</strong> I used to be a competitive powerlifter in
         high school! I don’t train competitively anymore, but I lift
         consistently at my campus gym. I’m also a retired SoulCycler (haters
-        will say it’s not real cardio, but me and my Peloton playlist
-        disagree).
+        will say it’s not real cardio, but my Peloton playlist and I
+        disagree)
       </>
     ),
     width: 528,

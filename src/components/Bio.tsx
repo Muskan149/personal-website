@@ -1,14 +1,12 @@
 import { bio, highlights, type HighlightId } from "@/content/about";
 
 type BioProps = {
-  activeId: HighlightId | null;
   pinnedId: HighlightId | null;
   onHover: (id: HighlightId | null) => void;
   onTogglePin: (id: HighlightId) => void;
 };
 
 export default function Bio({
-  activeId,
   pinnedId,
   onHover,
   onTogglePin,
@@ -32,7 +30,6 @@ export default function Bio({
             }
 
             const id = segment.highlight;
-            const isActive = activeId === id;
             const isPinned = pinnedId === id;
 
             return (
@@ -53,9 +50,7 @@ export default function Bio({
                   }
                 }}
                 style={{ backgroundColor: highlights[id].color }}
-                className={`box-decoration-clone cursor-pointer rounded px-1 transition-shadow outline-none focus-visible:ring-2 focus-visible:ring-brown/40 ${
-                  isActive ? "ring-2 ring-brown/30" : ""
-                }`}
+                className="box-decoration-clone cursor-pointer rounded px-1 transition-shadow outline-none focus-visible:ring-2 focus-visible:ring-brown/40"
               >
                 {segment.text}
               </span>
